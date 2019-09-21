@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("Analysis",
+	{
+		theme: "light2",
+		title:{
+			text: "Trash Analysis"
+		},
+		data: [
+		{
+			type: "pie",
+			showInLegend: true,
+			toolTipContent: "{y} - #percent %",
+			yValueFormatString: "# Objects",
+			legendText: "{indexLabel}",
+			dataPoints: [
+				{  y: 35, indexLabel: "Organic Waste" },
+				{  y: 45, indexLabel: "Recyclable" },
+				{  y: 20, indexLabel: "Landfill" },
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+<body>
+<div id="Analysis" style="height: 300px; width: 100%;"></div>
+</body>
+ </html>
